@@ -11,11 +11,11 @@ rm -rf ~/.config/spicetify
 
 # Create new Config Fix
 curl -o "config-xpui.ini" \
-https://raw.githubusercontent.com/PbtServers/PastePlus-Temp/refs/heads/master/config-xpui-CustomUser-Julyx.ini
+https://raw.githubusercontent.com/PbtServers/PastePlus-Temp/refs/heads/master/config-xpui-CustomUser-EditFix.ini
 
 # Move the new Config Fix
 mkdir ~/.config/spicetify/
-sed -i -e "s/Julyx/$usuario/g" config-xpui.ini
+sed -i -e "s/CustomUser27/$usuario/g" config-xpui.ini
 mv config-xpui.ini ~/.config/spicetify/
 rm config-xpui.ini
 
