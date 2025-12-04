@@ -1,16 +1,23 @@
 #!/bin/bash
 
+# Seleccionar Usuario para el Script
+read -p "Enter your username: " usuario
+read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+
 # Remove OLD Spicetify
 spicetify restore
-sudo rm -rf ~/.spicetify
-sudo rm -rf ~/.config/spicetify
+rm -rf ~/.spicetify
+rm -rf ~/.config/spicetify
 
-# Create new Config Fix (CustomUser-Julyx)
+# Create new Config Fix
 curl -o "config-xpui.ini" \
 https://raw.githubusercontent.com/PbtServers/PastePlus-Temp/refs/heads/master/config-xpui-CustomUser-Julyx.ini
 
+# Move the new Config Fix
 mkdir ~/.config/spicetify/
+sed -i -e "s/Julyx/$usuario/g" config-xpui.ini
 mv config-xpui.ini ~/.config/spicetify/
+rm config-xpui.ini
 
 # Install CLI Base
 curl -o "spice1.sh" https://raw.githubusercontent.com/spicetify/cli/main/install.sh && sh spice1.sh
@@ -28,3 +35,5 @@ spicetify update
 # Install Marketplace resources
 curl -o "spice2.sh" https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh && sh spice2.sh
 rm spice2.sh
+
+echo "Instalación completada correctamente!"
