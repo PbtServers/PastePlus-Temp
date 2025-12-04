@@ -36,4 +36,4 @@ spicetify update
 curl -o "spice2.sh" https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh && sh spice2.sh
 rm spice2.sh
 
-echo "Instalación completada correctamente!"
+echo "Instalación completada correctamente! (Es necesario volver a ejecutar el script si ha ocurrido algun error)"
