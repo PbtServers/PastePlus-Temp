@@ -5,7 +5,7 @@ sudo curl -o "spice1.sh" https://raw.githubusercontent.com/spicetify/cli/main/in
 sudo rm spice1.sh
 
 # Install Marketplace resources
-sudo curl -o "spice2.sh" https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh && sudo sh spice2.sh --root
+sudo curl -o "spice2.sh" https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh && sudo sh spice2.sh
 sudo rm spice2.sh
 
 # Configure Spotify Prefs Flatpak
