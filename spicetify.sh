@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Install CLI Base
-sudo curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sudo sh
+sudo curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sudo sh --root
 
 # Install Marketplace resources
-sudo curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sudo sh
+sudo curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sudo sh --root
 
 # Configure Spotify Prefs Flatpak
 sudo spicetify config prefs_path ~/.var/app/com.spotify.Client/config/spotify/prefs
